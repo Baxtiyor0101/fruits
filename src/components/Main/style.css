@@ -1,0 +1,15 @@
+.item {
+  width: 350px;
+  background-color: aqua;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.imgs {
+  width: 300px;
+}
