@@ -6,9 +6,12 @@ import img3 from "./assets/img/minora.jpg";
 import img4 from "./assets/img/parij.jpg";
 import img5 from "./assets/img/spring.jpg";
 import img6 from "./assets/img/tele.jpg";
+import Controlled from "./components/Controlled";
 import First from "./components/First";
 import Maps from "./components/Maps";
 import State from "./components/State";
+import StyledCom from "./components/StyledCom";
+import Uncontrolled from "./components/Uncontrolled";
 
 export function App() {
   let data = [
@@ -25,7 +28,11 @@ export function App() {
         <h1>hello</h1>
       </First> */}
       {/* <State /> */}
-      <Maps />
+      {/* <Maps /> */}
+      {/* <StyledCom /> */}
+      <Controlled />
+      <hr />
+      <Uncontrolled />
     </div>
   );
 }

@@ -20,6 +20,8 @@ function Maps() {
             </>
           );
         })}
+        
+        {/* sdhjbdshb */}
         {/* <div className="item">
           <img src={cards[0].img} alt="images" />
           <h3>Name: {cards[0].name}</h3>
