@@ -1,13 +1,8 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
-// import Main from "./components/Main";
-import img1 from "./assets/img/maqbara.jpg";
-import img2 from "./assets/img/masjid.jpg";
-import img3 from "./assets/img/minora.jpg";
-import img4 from "./assets/img/parij.jpg";
-import img5 from "./assets/img/spring.jpg";
-import img6 from "./assets/img/tele.jpg";
+import { Route, Routes } from "react-router-dom";
+
 import Controlled from "./components/Controlled";
+import Error from "./components/Error";
 import First from "./components/First";
 import Maps from "./components/Maps";
 import Navbar from "./components/Navbar";
@@ -25,15 +20,20 @@ export function App() {
   ];
   return (
     <div className="wrapper">
-      <Navbar />
-      <Switch>
-        <Route path="/controlled" component={Controlled} />
-        <Route path="/first" component={First} />
-        <Route path="/maps" component={Maps} />
-        <Route path="/second" component={Second} />
-        <Route path="/styledcom" component={StyledCom} />
-        <Route path="/uncontrolled" component={Uncontrolled} />
-      </Switch>
+      {/* <Navbar /> */}
+
+      <Routes>
+        <Route element={<Navbar />}>
+          <Route exact path={"/"} element={<Controlled />} />
+          <Route path="/controlled" element={<Controlled />} />
+          <Route path="/first" element={<First />} />
+          <Route path="/maps" element={<Maps />} />
+          <Route path="/second" element={<Second />} />
+          <Route path="/styledcom" element={<StyledCom />} />
+          <Route path="/uncontrolled" element={<Uncontrolled />} />
+          <Route path={"/*"} element={Error} />
+        </Route>
+      </Routes>
     </div>
   );
 }
