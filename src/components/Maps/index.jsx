@@ -9,7 +9,7 @@ function Maps() {
       <div className="container">
         {cards.map((val) => {
           return (
-            <>
+            <div key={val.id}>
               <div className="item">
                 <img src={val.img} alt="images" />
                 <h3>Name: {val.name}</h3>
@@ -17,10 +17,10 @@ function Maps() {
                 <p>Age: {val.age}</p>
                 <button>See more ...</button>
               </div>
-            </>
+            </div>
           );
         })}
-        
+
         {/* sdhjbdshb */}
         {/* <div className="item">
           <img src={cards[0].img} alt="images" />
